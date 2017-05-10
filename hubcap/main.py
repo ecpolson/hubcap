@@ -8,7 +8,7 @@ from logger import Logger
 class Main():
   def __init__(self):
     self.state = Armed()
-    self.log = Logger()
+    self.log = Logger(filepath = '/proj/hubcap/hubcap/logs/main.log')
 
   def main(self):
     try:

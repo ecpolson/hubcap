@@ -3,8 +3,11 @@ import time
 
 class Logger():
   
-  def __init__(self):
-    self.filepath = '/proj/hubcap/hubcap/logs/logging.log'
+  def __init__(self,filepath=None):
+    if filepath is not None:
+      self.filepath = filepath
+    else:
+      self.filepath = '/proj/hubcap/hubcap/logs/logging.log'
     f = open(self.filepath, 'w')
     f.close()
     self.topic = {'INFO':'info',
